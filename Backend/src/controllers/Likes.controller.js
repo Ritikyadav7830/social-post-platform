@@ -1,7 +1,7 @@
 import { Post } from "../models/post.model.js";
 import { ApiError } from "../utils/ApiError.js";
 import { ApiResponse } from "../utils/ApiResponse.js";
-import { asyncHandler } from "../utils/asyncHandler.js";
+import { asyncHandler } from "../utils/AsyncHandler.js";
 
 const LikesPost = asyncHandler(async (req, res) => {
   const post = await Post.findById(req.params.postId);

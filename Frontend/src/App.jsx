@@ -4,7 +4,7 @@ import './App.css'
 import  Footer  from './Components/Footer/Footer'
 import  Header  from './Components/Header/Header'
 import { Outlet } from 'react-router-dom'
-import { login, logout } from "./Store/authSlice";
+import { login, logout } from "./Store/Authslice.js";
 
 function App() {
 //   const [loading, setLoading] = useState(true)
@@ -24,7 +24,7 @@ function App() {
                 }
             );
 
-            console.log("APP MOUNT");
+            // console.log("APP MOUNT");
             const result = await response.json();
 
             if (result.success) {

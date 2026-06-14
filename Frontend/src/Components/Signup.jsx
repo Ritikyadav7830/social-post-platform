@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Button, Input, Logo } from './Index.js'
 import { useForm } from 'react-hook-form'
+import { API_URL } from "../config";
 
 function Signup() {
 
@@ -24,7 +25,7 @@ function Signup() {
         try {
 
             const response = await fetch(
-                "http://localhost:8000/api/v1/users/register",
+                `${API_URL}/api/v1/users/register`,
                 {
                     method: "POST",
                     headers: {
@@ -105,18 +106,18 @@ function Signup() {
 
                     <Input
                     className="
-w-full
-rounded-xl
-border
-border-gray-300
-px-4
-py-3
-outline-none
-focus:border-indigo-500
-focus:ring-2
-focus:ring-indigo-200
-transition
-"
+                            w-full
+                            rounded-xl
+                            border
+                            border-gray-300
+                            px-4
+                            py-3
+                            outline-none
+                            focus:border-indigo-500
+                            focus:ring-2
+                            focus:ring-indigo-200
+                            transition
+                            "
                         label="Full Name"
                         placeholder="Enter your full name"
                         {...register("fullName", {

@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import {Container, PostForm} from '../Components/Index'
 import { useNavigate,  useParams } from 'react-router-dom';
+import { API_URL } from "../config";
 
 function EditPost() {
     const [post, setPosts] = useState(null)
@@ -11,7 +12,7 @@ function EditPost() {
     const fetchPost = async () => {
         try {
             const response = await fetch(
-                `http://localhost:8000/api/v1/posts/${postId}`
+                `${API_URL}/api/v1/posts/${postId}`
             );
 
             const result = await response.json();

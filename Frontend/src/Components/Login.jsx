@@ -4,6 +4,8 @@ import { Button, Input, Logo } from "./index"
 import { useForm } from "react-hook-form"
 import { login } from "../store/authSlice";
 import { useDispatch } from "react-redux"
+import { API_URL } from "../config";
+
 
 function Login() {
 
@@ -26,7 +28,7 @@ function Login() {
 
         try {
             const response = await fetch(
-                "http://localhost:8000/api/v1/users/login",
+                `${API_URL}/api/v1/users/login`,
                 {
                     method: "POST",
                     headers: {

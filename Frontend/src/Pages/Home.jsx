@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { Container, PostCard } from '../Components/Index'
+import { API_URL } from "../config";
 
 
 function Home() {
@@ -22,7 +23,7 @@ useEffect(() => {
     const fetchPosts = async () => {
         try {
             let url =
-                    `http://localhost:8000/api/v1/posts/my-posts?page=${currentPage}`;
+                    `${API_URL}/api/v1/posts/my-posts?page=${currentPage}`;
             const response = await fetch(url,
                 {
                     credentials: "include",

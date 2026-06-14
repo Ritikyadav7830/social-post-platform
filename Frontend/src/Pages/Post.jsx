@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { Button, Container } from "../Components/Index";
 import { useSelector } from "react-redux";
+import { API_URL } from "../config";
 
 export default function Post() {
     const [post, setPost] = useState(null);
@@ -21,7 +22,7 @@ export default function Post() {
         const fetchPost = async () => {
             try {
                 const response = await fetch(
-                    `http://localhost:8000/api/v1/posts/${postId}`
+                    `${API_URL}/api/v1/posts/${postId}`
                 );
 
                 const result = await response.json();
@@ -57,7 +58,7 @@ export default function Post() {
     const handleLike = async () => {
         try {
             const response = await fetch(
-                `http://localhost:8000/api/v1/posts/${post._id}/like`,
+                `${API_URL}/api/v1/posts/${post._id}/like`,
                 {
                     method: "PATCH",
                     credentials: "include",
@@ -81,7 +82,7 @@ export default function Post() {
     const deletePost = async () => {
         try {
             const response = await fetch(
-                `http://localhost:8000/api/v1/posts/${post._id}`,
+                `${API_URL}/api/v1/posts/${post._id}`,
                 {
                     method: "DELETE",
                     credentials: "include",
@@ -104,7 +105,7 @@ export default function Post() {
     const fetchComments = async () => {
     try {
         const response = await fetch(
-            `http://localhost:8000/api/v1/comments/${postId}/comments`
+            `${API_URL}/api/v1/comments/${postId}/comments`
         );
 
         const result = await response.json();
@@ -123,7 +124,7 @@ export default function Post() {
 
     try {
         const response = await fetch(
-            `http://localhost:8000/api/v1/comments/${post._id}/comment`,
+            `${API_URL}/api/v1/comments/${post._id}/comment`,
             {
                 method: "POST",
                 credentials: "include",
@@ -153,7 +154,7 @@ export default function Post() {
     const handleDeleteComment = async (commentId) => {
     try {
         const response = await fetch(
-            `http://localhost:8000/api/v1/comments/${commentId}`,
+            `${API_URL}/api/v1/comments/${commentId}`,
             {
                 method: "DELETE",
                 credentials: "include",
@@ -182,7 +183,7 @@ export default function Post() {
 
     try {
         const response = await fetch(
-            `http://localhost:8000/api/v1/comments/${editingCommentId}`,
+            `${API_URL}/api/v1/comments/${editingCommentId}`,
             {
                 method: "PATCH",
                 credentials: "include",

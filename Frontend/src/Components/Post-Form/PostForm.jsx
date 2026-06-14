@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { Button, Input, Select } from "../Index";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { API_URL } from "../../config";
 
 export default function PostForm({ post }) {
     const { register,handleSubmit, watch, setValue } = useForm({
@@ -21,7 +22,7 @@ export default function PostForm({ post }) {
 const submitPost = async (data) => {
   try {
     let response;
-
+    
     if (post) {
       // UPDATE
       const formData = new FormData();
@@ -32,9 +33,9 @@ formData.append("status", data.status);
 
 if (data.featuredImage?.[0]) {
     formData.append("featuredImage", data.featuredImage[0]);
-}
+} 
       response = await fetch(
-        `http://localhost:8000/api/v1/posts/${post._id}`,
+        `${API_URL}/api/v1/posts/${post._id}`,
         {
           method: "PATCH",
           credentials: "include",
@@ -52,7 +53,7 @@ formData.append("status", data.status);
 formData.append("featuredImage", data.featuredImage[0]);
 
       response = await fetch(
-        "http://localhost:8000/api/v1/posts/create-post",
+        `${API_URL}/api/v1/posts/create-post`,
         {
           method: "POST",
           credentials: "include",

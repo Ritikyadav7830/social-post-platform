@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { Container, PostCard } from '../Components/Index'
 import { useSearchParams } from "react-router-dom";
+import { API_URL } from "../config";
 
 function AllPosts() {
     const [posts, setPosts] = useState([])
@@ -24,11 +25,11 @@ useEffect(() => {
              setPosts([]);
 
             let url =
-                    `http://localhost:8000/api/v1/posts/get-posts?page=${currentPage}`;
+                    `${API_URL}/api/v1/posts/get-posts?page=${currentPage}`;
 
             if (searchQuery) {
                 url =
-                    `http://localhost:8000/api/v1/posts/search?query=${searchQuery}&page=${currentPage}`;
+                    `${API_URL}/api/v1/posts/search?query=${searchQuery}&page=${currentPage}`;
             }
 
             const response = await fetch(url);

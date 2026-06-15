@@ -87,13 +87,11 @@ if (searchQuery && posts.length === 0) {
             All Posts
         </h2>
     </div>
-            <div className='flex flex-wrap'>
+           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {posts.map((post) => (
-                    <div key={post._id} className='p-2 w-1/4'>
-                        <PostCard {...post} />
-                    </div>
+                <PostCard key={post._id} {...post} />
                 ))}
-            </div>
+           </div>
 
         {/* Pagination */}
         <div className="flex justify-center gap-2 mt-8">

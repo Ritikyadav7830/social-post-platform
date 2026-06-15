@@ -35,7 +35,6 @@ const addComment = asyncHandler(async (req, res) => {
   );
 });
 
-
 const getPostComments = asyncHandler(async (req, res) => {
 
     const { postId } = req.params;
@@ -54,7 +53,6 @@ const getPostComments = asyncHandler(async (req, res) => {
         )
     );
 });
-
 
 const deleteComment = asyncHandler(async (req, res) => {
     const { commentId } = req.params;
@@ -82,7 +80,6 @@ const deleteComment = asyncHandler(async (req, res) => {
         )
     );
 });
-
 
 const updateComment = asyncHandler(async (req, res) => {
 

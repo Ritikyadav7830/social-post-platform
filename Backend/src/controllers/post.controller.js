@@ -56,7 +56,7 @@ const createPost = asyncHandler(async (req, res) => {
 const getMyPosts = asyncHandler(async (req, res) => {
 
     const page = Number(req.query.page) || 1;
-    const limit = 4;
+    const limit = 6;
     const skip = (page - 1) * limit;
 
     const totalPosts = await Post.countDocuments({
@@ -91,7 +91,7 @@ const getAllPosts = asyncHandler(async (req, res) => {
 
     const page = Number(req.query.page) || 1;
 
-    const limit = 8;
+    const limit = 9;
 
     const skip = (page - 1) * limit;
 

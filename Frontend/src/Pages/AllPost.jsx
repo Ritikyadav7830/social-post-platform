@@ -39,7 +39,6 @@ useEffect(() => {
             if (result.success) {
                 setPosts(result.data.posts)
                 setTotalPages(result.data.totalPages);
-                console.log(result)
             }
 
         } catch (error) {

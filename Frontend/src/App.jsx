@@ -23,8 +23,6 @@ function App() {
                     credentials: "include",
                 }
             );
-
-            // console.log("APP MOUNT");
             const result = await response.json();
 
             if (result.success) {

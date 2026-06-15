@@ -40,16 +40,11 @@ function Login() {
             )
 
             const result = await response.json()
-            console.log(result)
-            console.log("hello")
 
             if (!response.ok) {
                 throw new Error(result.message || "Login failed")
             }
 
-            // redux state update
-        //  console.log("TYPE:", typeof result.data.user);
-        //  console.log("VALUE:", result.data.user);
            dispatch(login(result.data.user));
 
             setSuccess("User login successfully")

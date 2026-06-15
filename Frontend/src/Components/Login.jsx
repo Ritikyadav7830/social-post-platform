@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { Button, Input, Logo } from "./index"
+import { Button, Input, Logo } from "./Index"
 import { useForm } from "react-hook-form"
 import { login } from "../Store/Authslice";
 import { useDispatch } from "react-redux"

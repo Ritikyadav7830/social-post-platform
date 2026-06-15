@@ -7,7 +7,7 @@ import { Outlet } from 'react-router-dom'
 import { login, logout } from "./Store/Authslice.js";
 
 function App() {
-//   const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true)
   const dispatch = useDispatch()
 
 
@@ -45,11 +45,11 @@ function App() {
 
             dispatch(logout());
         }
-        // } finally {
+         finally {
 
-        //     setLoading(false);
+            setLoading(false);
 
-        // }
+        }
     };
 
     getCurrentUser();
@@ -57,13 +57,13 @@ function App() {
 }, [dispatch]);
 
 
-// if (loading) {
-//     return (
-//         <div className="text-center py-8">
-//             Loading...
-//         </div>
-//     );
-// }
+if (loading) {
+    return (
+        <div className="text-center py-8">
+            Loading...
+        </div>
+    );
+}
   
   return  (
     <div className='min-h-screen flex flex-col bg-slate-100'>

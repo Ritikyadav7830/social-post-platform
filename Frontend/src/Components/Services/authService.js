@@ -1,9 +1,11 @@
+import { API_URL } from "../config";
+
 class AuthService {
 
     async logout() {
 
         return await fetch(
-            "http://localhost:8000/api/v1/users/logout",
+            `${API_URL}/api/v1/users/logout`,
             {
                 method: "POST",
                 credentials: "include"

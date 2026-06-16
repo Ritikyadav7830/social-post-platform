@@ -1,5 +1,5 @@
 # social-post-platform
-A full-stack social media platform built using the MERN stack. The application enables users to create, manage, search, and interact with posts through a secure JWT-based authentication system. It includes Redux Toolkit state management, pagination, responsive design, and secure cookie-based authentication.
+A full-stack social media platform built using the MERN stack that enables users to create, manage, search, and interact with posts. The application features JWT-based authentication, secure cookie-based sessions, image uploads with Cloudinary, post likes and comments, search and pagination, Redux Toolkit state management, and a responsive user interface for seamless user experience across devices.
 
 ## Live Demo
 

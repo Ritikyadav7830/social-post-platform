@@ -37,7 +37,20 @@ A full-stack social media platform built using the MERN stack. The application e
 
 ## Screenshots
 
-(Add screenshots)
+### Login Page
+![Login Page](./Screenshots/Login-page.png)
+
+### User Dashboard
+![Dashboard](./Screenshots/Dashboard.png)
+
+### All Posts
+![All Posts](./Screenshots/All-posts.png)
+
+### Create Post
+![Create Post](./Screenshots/create-post.png)
+
+### Post Details & Comments
+![Comments](./Screenshots/Post-Details-and-Comments.png)
 
 ## Folder Structure
 

@@ -11,6 +11,8 @@ A full-stack social media platform built using the MERN stack. The application e
 - Secure Cookie-Based Authentication
 - Create, Edit and Delete Posts
 - Image Upload and Storage using Cloudinary
+- Comment Management System
+- Like Functionality
 - Search Functionality
 - Pagination
 - User Profile Management
@@ -92,17 +94,25 @@ social-post-platform/
 
 ### Clone Repository
 
-git clone ...
+```bash
+git clone https://github.com/Ritikyadav7830/social-post-platform.git
+```
 
 ### Frontend
 
+```bash
+cd Frontend
 npm install
 npm run dev
+```
 
 ### Backend
 
+```bash
+cd Backend
 npm install
 npm start
+```
 
 ## Future Enhancements
 
